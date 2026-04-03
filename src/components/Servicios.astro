@@ -1,0 +1,121 @@
+---
+const servicios = [
+	{
+		titulo: "Manicure",
+		descripcion:
+			"Cuidado y decoracion de manos y uñas. Incluye limpieza, cuticula, limado y esmalte.",
+		icono: "💅",
+	},
+	{
+		titulo: "Diseno de Uñas",
+		descripcion:
+			"Disenos exclusivos personalizados. Desde uñas con un arte sutil hasta looks vibrantes y unicos.",
+		icono: "✨",
+	},
+	{
+		titulo: "Uñas Esculpidas",
+		descripcion:
+			"Extensiones profesionales de gel o acrilico. Durabilidad y apariencia natural.",
+		icono: "💫",
+	},
+	{
+		titulo: "Uñas de Gel",
+		descripcion:
+			"Aplicacion de gel UV para uñas mas fuertes y brillantes. Disponible en varios colores.",
+		icono: "🌟",
+	},
+	{
+		titulo: "Tratamientos SPA",
+		descripcion:
+			"Experiencia de spa completa para sus manos. Masajes, mascarilla y mas.",
+		icono: "🧴",
+	},
+];
+---
+
+<section id="servicios" class="servicios section">
+	<div class="container">
+		<h2 class="section-title">Nuestros Servicios</h2>
+		<p class="section-subtitle">
+			Descubre nuestra gama completa de servicios de manicure, disenados
+			para mimarte y hacer resaltar tu belleza.
+		</p>
+
+		<div class="servicios-grid">
+			{
+				servicios.map((servicio) => (
+					<div class="servicio-card">
+						<div class="servicio-icono">{servicio.icono}</div>
+						<h3 class="servicio-titulo">{servicio.titulo}</h3>
+						<p class="servicio-descripcion">
+							{servicio.descripcion}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	.servicios {
+		background: var(--color-surface);
+	}
+
+	.servicios-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--spacing-xl);
+	}
+
+	.servicio-card {
+		flex: 0 0 calc(33.333% - var(--spacing-xl));
+		max-width: calc(33.333% - var(--spacing-xl));
+		background: var(--color-background);
+		padding: var(--spacing-xl);
+		border-radius: var(--border-radius-lg);
+		text-align: center;
+		transition: var(--transition);
+		border: 1px solid var(--color-border);
+		box-sizing: border-box;
+	}
+
+	.servicio-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		border-color: var(--color-primary-light);
+	}
+
+	.servicio-icono {
+		font-size: 3rem;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.servicio-titulo {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: var(--spacing-sm);
+		color: var(--color-text);
+	}
+
+	.servicio-descripcion {
+		font-size: 0.95rem;
+		color: var(--color-text-light);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 1024px) {
+		.servicio-card {
+			flex: 0 0 calc(50% - var(--spacing-xl));
+			max-width: calc(50% - var(--spacing-xl));
+		}
+	}
+
+	@media (max-width: 640px) {
+		.servicio-card {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+</style>
