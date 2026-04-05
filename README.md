@@ -1,43 +1,32 @@
-# Astro Starter Kit: Minimal
+# lorenails.cl
 
-```sh
-yarn create astro@latest -- --template minimal
+Sitio web para negocio de manicura, construido con Astro.
+
+## Descripción
+
+Página web informativa para展示 servicios de manicura, galería de trabajos y información de contacto.
+
+## Requisitos
+
+- Node.js >= 22.12.0
+
+## Uso
+
+```bash
+# Instalar dependencias
+yarn install
+
+# Iniciar servidor de desarrollo
+yarn dev
+
+# Construir para producción
+yarn build
+
+# Vista previa de producción
+yarn preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tech Stack
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [Astro](https://astro.build/) - Framework web
+- [Node.js](https://nodejs.org/) - Entorno de ejecución
